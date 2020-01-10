@@ -71,7 +71,7 @@ email=""
 mobile=""
 code=""
 
-x=checkregister(name,lastname,username,password,email,mobile,code)      #crearing object
+x=Checkregister(name,lastname,username,password,email,mobile,code)      #crearing object
 while True: 
     name=input("Enter your name:")
     if x.checkname()==True:
