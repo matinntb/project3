@@ -45,9 +45,12 @@ class checkregister:
         mod=0
         if re.match("[\d]{10}$",code):
             for i in range(0,9):
-                summ+=int(code[i])*location
-                location-=1
-            mod=summ%11
+                if code=='0000000000':
+                    return False
+                else:
+                    summ+=int(code[i])*location
+                    location-=1
+                mod=summ%11
             if mod<2:
                 if int(code[9])==mod:
                     return True
@@ -56,6 +59,7 @@ class checkregister:
                     return True
                 else:
                     return False
+        
 
 
 
@@ -118,7 +122,7 @@ while True:
         print("***CODE ERROR***:::Code shoule be 11 character and just contain number and it is True in rule")
         print("Register Error")
         break
-    print("register ok")
+    print("Register ok")
     break
 
 
