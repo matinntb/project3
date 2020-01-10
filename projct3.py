@@ -1,5 +1,5 @@
 import re
-class checkregister:
+class Checkregister:
     def __init__(self,name,lastname,username,password,email,mobile,code):
         self.name=name
         self.lastname=lastname
